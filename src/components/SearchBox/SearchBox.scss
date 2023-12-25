@@ -1,0 +1,20 @@
+@use "../../assets/styles/variables" as *;
+
+// SearchBox.scss
+
+.search {
+
+    &__input {
+        width: 100%;
+        //padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid $color-beige; 
+        border-radius: 5px; //change to rem
+        font-size: 1rem;
+
+        &:focus {
+            outline: none;
+            border-color: #2196F3; 
+        }
+    }
+}
