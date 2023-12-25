@@ -1,4 +1,3 @@
-import React from 'react';
 import { Beer } from '../../types/types';
 import "./Card.scss";
 
@@ -12,7 +11,8 @@ const Card = ({ beer } : CardProps) => {
       <img src={beer.image_url} alt={beer.name} className="card__image" />
       <div className="card__info">
         <h2 className="card__name">{beer.name}</h2>
-        <p className="card__description">{beer.description}</p>
+        <p className="card__tagline">{beer.tagline}</p>
+        <p className="card__first-brewed">First brewed: {beer.first_brewed}</p>
         <p className="card__abv">ABV: {beer.abv}%</p>
       </div>
     </div>

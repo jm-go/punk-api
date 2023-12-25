@@ -4,7 +4,6 @@ import "./data/beers";
 import { FormEvent, useState } from "react";
 import beers from "./data/beers";
 import Navbar from "./components/Navbar/Navbar";
-import Card from "./components/Card/Card";
 import CardList from "./components/CardList/CardList";
 
 const App = () => {
