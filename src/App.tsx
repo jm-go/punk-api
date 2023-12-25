@@ -3,6 +3,7 @@ import "./types/types";
 import "./data/beers";
 import { FormEvent, useState } from "react";
 import beers from "./data/beers";
+import Navbar from "./components/Navbar/Navbar";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
@@ -18,7 +19,14 @@ const App = () => {
     beer.name.toLowerCase().includes(searchTerm)
   );
 
-  return <></>;
+  return (
+    <Navbar
+      onSearch={handleInput}
+      onFilterChange={function (filterType: string, value: boolean): void {
+        throw new Error("Function not yet implemented.");
+      }}
+    />
+  );
 };
 
 export default App;

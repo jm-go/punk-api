@@ -6,15 +6,16 @@
 
     &__input {
         width: 100%;
-        //padding: 10px;
+        padding: 0.05rem;
         box-sizing: border-box;
-        border: 1px solid $color-beige; 
-        border-radius: 5px; //change to rem
-        font-size: 1rem;
+        border: 2px solid $color-beige; 
+        border-radius: 0.3rem;
+        font-size: 0.6rem;
+        text-align: center;
 
         &:focus {
             outline: none;
-            border-color: #2196F3; 
+            border-color: $pastel-green; 
         }
     }
 }

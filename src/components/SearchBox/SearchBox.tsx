@@ -1,18 +1,18 @@
 import { FormEventHandler } from "react";
+import "./SearchBox.scss";
 
-// Define the type for the props
 type SearchBoxProps = {
-  searchTerm: string;
+  //searchTerm: string;
   onSearch: FormEventHandler<HTMLInputElement>;
 };
 
-const SearchBox = ({ searchTerm, onSearch }: SearchBoxProps) => {
+const SearchBox = ({ onSearch }: SearchBoxProps) => {
   return (
     <div className="search">
       <input
         type="text"
-        placeholder="Search by name"
-        value={searchTerm}
+        placeholder="Search"
+        //value={searchTerm}
         onChange={onSearch}
         className="search__input"
       />

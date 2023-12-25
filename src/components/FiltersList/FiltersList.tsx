@@ -1,4 +1,5 @@
 import React, { ChangeEvent } from "react";
+import "./FiltersList.scss";
 
 type FiltersListProps = {
   onFilterChange: (filterType: string, value: boolean) => void;
@@ -13,22 +14,25 @@ const FiltersList = ({ onFilterChange }: FiltersListProps) => {
 
   return (
     <div className="filters">
-      <label>
+      <label className="filters__label">
         <input
+          className="filters__input"
           type="checkbox"
           //onChange={(e) => handleCheckboxChange(e, 'highAlcohol')}
         />
         High ABV ({">"} 6.0%)
       </label>
-      <label>
+      <label className="filters__label">
         <input
+          className="filters__input"
           type="checkbox"
           //onChange={(e) => handleCheckboxChange(e, 'classicRange')}
         />
         Classic Range
       </label>
-      <label>
+      <label className="filters__label">
         <input
+          className="filters__input"
           type="checkbox"
           //onChange={(e) => handleCheckboxChange(e, 'highAcidity')}
         />
