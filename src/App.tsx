@@ -4,6 +4,8 @@ import "./data/beers";
 import { FormEvent, useState } from "react";
 import beers from "./data/beers";
 import Navbar from "./components/Navbar/Navbar";
+import Card from "./components/Card/Card";
+import CardList from "./components/CardList/CardList";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
@@ -20,12 +22,17 @@ const App = () => {
   );
 
   return (
-    <Navbar
-      onSearch={handleInput}
-      onFilterChange={function (filterType: string, value: boolean): void {
-        throw new Error("Function not yet implemented.");
-      }}
-    />
+    <>
+      <div className="app-container">
+        <Navbar
+          onSearch={handleInput}
+          onFilterChange={function (filterType: string, value: boolean): void {
+            throw new Error("Function not yet implemented.");
+          }}
+        />
+        <CardList beers={filteredBeers} />
+      </div>
+    </>
   );
 };
 

@@ -1,0 +1,33 @@
+@use "src/assets/styles/variables" as *;
+
+.card {
+    background-color: $color-white;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    box-shadow: -3px 5px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    width: 12rem;
+    height: 10rem;
+  
+    &__image {
+      width: 100%;
+      height: auto;
+      max-height: 90%;
+      object-fit: contain;
+    }
+  
+    &__name {
+      font-size: 0.85rem;
+    }
+  
+    &__abv {
+      font-size: 0.8rem;
+    }
+  
+    &__description {
+      font-size: 0.7rem;
+      line-height: 1.4;
+    }
+  }

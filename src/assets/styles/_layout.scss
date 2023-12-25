@@ -1,0 +1,16 @@
+.app-container {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    height: 100vh;
+  }
+  
+  .navbar {
+    background-color: $color-white;
+    padding: 20px;
+    //overflow-y: auto; /* Enable vertical scrolling if needed */
+  }
+  
+  .card-list {
+    padding: 20px;
+    //overflow-y: auto; /* Enable vertical scrolling if needed */
+  }
