@@ -1,6 +1,7 @@
 import { FormEventHandler } from "react";
 import "./Navbar.scss";
 import SearchBox from "../SearchBox/SearchBox";
+import FiltersList from "../FiltersList/FiltersList";
 
 type NavbarProps = {
   onSearch: FormEventHandler<HTMLInputElement>;
@@ -13,7 +14,6 @@ const Navbar = ({ onSearch, onFilterChange }: NavbarProps) => {
       <h1 className="navbar__heading">Punk API</h1>
       <SearchBox onSearch={onSearch} searchTerm={""} />
       <FiltersList
-        className="navbar__filters"
         onFilterChange={onFilterChange}
       />
     </nav>
