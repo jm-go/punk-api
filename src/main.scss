@@ -1,0 +1,43 @@
+@use "./styles/variables" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $font-body;
+}
+
+body {
+    background-color: $pastel-green;
+}
+
+html {
+    font-size: 16px;
+}
+
+@media screen and (min-width: $breakpoint-tablet) {
+
+    html {
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: $breakpoint-laptop) {
+
+    html {
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: $breakpoint-desktop) {
+
+    html {
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: $breakpoint-large-desktop) {
+
+    html {
+        font-size: 40px;
+    }
+}
