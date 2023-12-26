@@ -1,0 +1,40 @@
+@use "../../assets/styles/variables" as *;
+
+.navbar {
+    background-color: $color-black;
+    color: white;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+
+    &__heading {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        font-family: $font-headers;
+        transition: transform 0.2s ease-in-out;
+        border-bottom: 2px solid $color-white;
+
+        &:hover {
+            transform: scale(1.03);
+            color: $pastel-green;
+        }
+    }
+
+    &__search {
+        margin-bottom: 1.5rem;
+    }
+
+    &__filters {
+        label {
+            display: block;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        display: none;
+    }
+}

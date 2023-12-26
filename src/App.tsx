@@ -7,6 +7,7 @@ import CardList from "./components/CardList/CardList";
 import { Beer } from "./types/types";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CardDetails from "./containers/CardDetails/CardDetails";
+import NavbarMobile from "./components/Navbar/NavbarMobile";
 
 const App = () => {
   const [beers, setBeers] = useState<Beer[]>([]);
@@ -47,6 +48,7 @@ const App = () => {
     <>
       <BrowserRouter>
         <div className="app-container">
+          <NavbarMobile onSearch={handleInput}/>
           <Navbar
             onSearch={handleInput}
             onFilterChange={function (

@@ -1,26 +1,21 @@
 @use "src/assets/styles/variables" as *;
 
 .app-container {
-    display: grid;
-    grid-template-columns: 20% 1fr;
+    display: flex;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: hidden;
-
-    @media screen and (min-width: $breakpoint-mobile-large) {
-        grid-template-columns: 13.5% 1fr;
-    }
-
-    @media screen and (min-width: $breakpoint-laptop) {
-        grid-template-columns: 13% 1fr;
-    }
 }
 
 .navbar {
     padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
 
-    @media screen and (min-width: $breakpoint-laptop) {
+    @media screen and (min-width: $breakpoint-tablet) {
         padding: 0.8rem;
+        // display: flex;
+        // flex-direction: column;
     }
 }
 
