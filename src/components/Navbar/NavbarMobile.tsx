@@ -9,7 +9,7 @@ type NavbarMobileProps = {
 const NavbarMobile = ({ onSearch }: NavbarMobileProps) => {
   return (
     <nav className="navbar-mobile">
-      <h1 className="navbar-mobile__heading">Punk API</h1>
+      <a className="navbar-mobile__link" href="/"><h1 className="navbar-mobile__heading">Punk API</h1></a>
       <SearchBox onSearch={onSearch} />
     </nav>
   );

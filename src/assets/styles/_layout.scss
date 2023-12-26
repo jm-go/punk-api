@@ -17,16 +17,5 @@
 
 .card-list {
     padding: 1.2rem;
-    margin-left: 0.4rem;
-    margin-right: 0.4rem;
-    margin-bottom: 2rem;
     overflow-y: auto;
-
-    @media screen and (min-width: $breakpoint-laptop) {
-        margin-left: 0.9rem;
-    }
-
-    @media screen and (min-width: $breakpoint-desktop) {
-        margin-left: 1.4rem;
-    }
 }
