@@ -57,9 +57,9 @@ const App = () => {
             }}
           />
           <Routes>
-            <Route path="/" element={<CardList beers={filteredBeers} />} />
+            <Route path="/punk-api/" element={<CardList beers={filteredBeers} />} />
             <Route
-              path="/beers/:id"
+              path="/punk-api/beers/:id"
               element={<CardDetails beers={beers} />}
             />
           </Routes>
