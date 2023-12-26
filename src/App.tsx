@@ -1,12 +1,13 @@
 import "./main.scss";
 import "./types/types";
 import "./data/beers";
-import { FormEvent, useState } from "react";
-import beers from "./data/beers";
+import { FormEvent, useEffect, useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import CardList from "./components/CardList/CardList";
+import { Beer } from "./types/types";
 
 const App = () => {
+  const [beers, setBeers] = useState<Beer[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>("");
 
   // Handler for search input changes
@@ -19,6 +20,26 @@ const App = () => {
   const filteredBeers = beers.filter((beer) =>
     beer.name.toLowerCase().includes(searchTerm)
   );
+
+  const getBeers = async () => {
+    try {
+      const url = "https://api.punkapi.com/v2/beers";
+      const response = await fetch(url);
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+  
+      const data: Beer[] = await response.json();
+      setBeers(data);
+    } catch (error) {
+      console.error("Error fetching beer data:", error);
+    }
+  };
+
+  useEffect(() => {
+    getBeers();
+  }, []);
 
   return (
     <>
