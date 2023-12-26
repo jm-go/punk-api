@@ -1,0 +1,38 @@
+@use "../../assets/styles/variables" as *;
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+
+    &__header {
+        font-family: $font-headers;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    &__image {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+        border-radius: 0.5rem;
+    }
+
+    &__description {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+
+    &__facts {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        &__item {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+}
