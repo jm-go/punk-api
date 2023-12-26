@@ -1,0 +1,46 @@
+@use "src/assets/styles/variables" as *;
+
+.card {
+    background-color: $color-white;
+    padding: 0.4rem;
+    border-radius: 1rem;
+    box-shadow: -3px 5px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    width: 8.5rem;
+    height: 8rem;
+    
+    &__image {
+      width: 40%; 
+      max-height: 90%;
+      object-fit: contain;
+      border-radius: 1rem 0 0 1rem;
+    }
+  
+    &__info {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      padding: 0.4rem;
+    }
+  
+    &__name {
+      font-family: $font-headers-secondary;
+      font-size: 0.85rem;
+      margin-bottom: 0.1rem;
+    }
+  
+    &__abv {
+      font-size: 0.5rem;
+    }
+
+    &__first-brewed {
+        font-size: 0.5rem;
+        margin-bottom: 0.1rem;
+      }
+  
+    &__tagline {
+      font-size: 0.5rem;
+      margin-bottom: 0.1rem;
+    }
+  }
