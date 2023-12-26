@@ -9,6 +9,11 @@
     align-items: center;
     width: 8.5rem;
     height: 8rem;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.03);
+  }
     
     &__image {
       width: 40%; 
@@ -27,20 +32,21 @@
     &__name {
       font-family: $font-headers-secondary;
       font-size: 0.85rem;
-      margin-bottom: 0.1rem;
+      margin-bottom: 0.4rem;
     }
   
     &__abv {
-      font-size: 0.5rem;
+      font-size: 0.6rem;
     }
 
     &__first-brewed {
         font-size: 0.5rem;
-        margin-bottom: 0.1rem;
+        margin-bottom: 0.2rem;
+        font-weight: bold;
       }
   
     &__tagline {
-      font-size: 0.5rem;
-      margin-bottom: 0.1rem;
+      font-size: 0.6rem;
+      margin-bottom: 0.3rem;
     }
   }
