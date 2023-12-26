@@ -11,7 +11,7 @@ type NavbarProps = {
 const Navbar = ({ onSearch, onFilterChange }: NavbarProps) => {
   return (
     <nav className="navbar">
-      <h1 className="navbar__heading">Punk API</h1>
+      <a className="navbar__link" href="/"><h1 className="navbar__heading">Punk API</h1></a>
       <SearchBox onSearch={onSearch} />
       <FiltersList
         onFilterChange={onFilterChange}

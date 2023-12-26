@@ -1,11 +1,11 @@
 @use "../../assets/styles/variables" as *;
 
-.navbar {
+.navbar-mobile {
     background-color: $color-black;
     color: white;
     height: auto;
     width: 100%;
-    display: flex;
+    display: none;
     justify-content: space-between;
     padding: 1rem;
 
@@ -34,7 +34,7 @@
         }
     }
 
-    @media screen and (min-width: $breakpoint-tablet) {
-        display: none;
+    @media screen and (max-width: $breakpoint-tablet) {
+        display: flex;
     }
 }

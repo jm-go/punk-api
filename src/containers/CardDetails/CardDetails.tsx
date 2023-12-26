@@ -37,6 +37,7 @@ const CardDetails = ({ beers }: CardDetailsProps) => {
       <div className="card-details__additional-info">
         <p>ABV: {beer.abv}%</p>
         <p>IBU: {beer.ibu}</p>
+        <p>Brewers tips: {beer.brewers_tips}</p>
         {/* Add more information later */}
       </div>
     </div>
