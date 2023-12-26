@@ -8,6 +8,7 @@ import { Beer } from "./types/types";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CardDetails from "./containers/CardDetails/CardDetails";
 import NavbarMobile from "./components/Navbar/NavbarMobile";
+import qs from "query-string";
 
 const App = () => {
   const [beers, setBeers] = useState<Beer[]>([]);

@@ -2,12 +2,13 @@
 
 .navbar-mobile {
     background-color: $color-black;
-    color: white;
-    height: auto;
+    color: $color-white;
+    height: 4rem;
     width: 100%;
     display: none;
-    justify-content: space-between;
-    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.7rem;
 
     &__link {
         text-decoration: none;
@@ -16,8 +17,8 @@
 
     &__heading {
         text-align: center;
-        margin-bottom: 1rem;
-        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.15rem;
         font-family: $font-headers;
         transition: transform 0.2s ease-in-out;
         border-bottom: 2px solid $color-white;
