@@ -12,7 +12,7 @@ const Card = ({ beer } : CardProps) => {
       <div className="card__info">
         <h2 className="card__name">{beer.name}</h2>
         <p className="card__tagline">{beer.tagline}</p>
-        <p className="card__first-brewed">First brewed: {beer.first_brewed}</p>
+        <p className="card__first-brewed">{beer.first_brewed}</p>
         <p className="card__abv">ABV: {beer.abv}%</p>
       </div>
     </div>
