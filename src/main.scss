@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: $pastel-green;
+    background-color: $color-grey;
     overflow-x: hidden;
 }
 
@@ -26,20 +26,20 @@ html {
 @media screen and (min-width: $breakpoint-laptop) {
 
     html {
-        font-size: 25px;
+        font-size: 24px;
     }
 }
 
 @media screen and (min-width: $breakpoint-desktop) {
 
     html {
-        font-size: 30px;
+        font-size: 28px;
     }
 }
 
 @media screen and (min-width: $breakpoint-large-desktop) {
 
     html {
-        font-size: 40px;
+        font-size: 42px;
     }
 }

@@ -1,0 +1,13 @@
+.filters {
+    margin-top: 0.5rem;
+
+    &__label {
+        font-size: 0.6rem;
+        margin-bottom: 0.3rem;
+    }
+
+    &__input {
+        margin-left: 0.3rem;
+        cursor: pointer;
+    }
+}

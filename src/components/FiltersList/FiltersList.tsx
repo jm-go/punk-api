@@ -1,43 +1,41 @@
-import React, { ChangeEvent } from "react";
-import "./FiltersList.scss";
+import FilterItem from "../FilterItem/FilterItem";
 
 type FiltersListProps = {
   onFilterChange: (filterType: string, value: boolean) => void;
 };
 
+const filterItems = [
+  {
+    id: "highAlcohol",
+    label: "High ABV (> 6.0%)",
+    value: false,
+  },
+  {
+    id: "classicRange",
+    label: "Classic Range",
+    value: false,
+  },
+  {
+    id: "highAcidity",
+    label: "Acidic (pH < 4)",
+    value: false,
+  },
+];
+
 const FiltersList = ({ onFilterChange }: FiltersListProps) => {
-  //   const handleCheckboxChange = (event: ChangeEvent<HTMLInputElement>, filterType: string
-  //   ) => {
-  //     const { checked } = event.target;
-  //     onFilterChange(filterType, checked);
-  //   };
+  const handleFilterChange = (filterId: string, value: boolean) => {
+    onFilterChange(filterId, value);
+  };
 
   return (
     <div className="filters">
-      <label className="filters__label">
-        <input
-          className="filters__input"
-          type="checkbox"
-          //onChange={(e) => handleCheckboxChange(e, 'highAlcohol')}
+      {filterItems.map((filter) => (
+        <FilterItem
+          key={filter.id}
+          filter={filter}
+          handleChecked={handleFilterChange}
         />
-        High ABV ({">"} 6.0%)
-      </label>
-      <label className="filters__label">
-        <input
-          className="filters__input"
-          type="checkbox"
-          //onChange={(e) => handleCheckboxChange(e, 'classicRange')}
-        />
-        Classic Range
-      </label>
-      <label className="filters__label">
-        <input
-          className="filters__input"
-          type="checkbox"
-          //onChange={(e) => handleCheckboxChange(e, 'highAcidity')}
-        />
-        Acidic (pH {"<"} 4)
-      </label>
+      ))}
     </div>
   );
 };
