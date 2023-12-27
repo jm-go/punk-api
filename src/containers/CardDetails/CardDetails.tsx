@@ -14,7 +14,6 @@ const CardDetails = ({ beers }: CardDetailsProps) => {
   const beer = beers.find((beer) => beer.id === Number(id));
 
   useEffect(() => {
-    // Adjust later
   }, [id, beers]);
 
   if (!beer) {
