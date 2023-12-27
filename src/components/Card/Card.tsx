@@ -16,7 +16,7 @@ const Card = ({ beer }: CardProps) => {
           <p className="card__tagline">{beer.tagline}</p>
           <p className="card__first-brewed">{beer.first_brewed}</p>
           <p className="card__abv">
-            <strong>ABV: </strong> {beer.abv}%
+            <strong>ABV </strong> {beer.abv}%
           </p>
         </div>
       </div>

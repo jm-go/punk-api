@@ -1,57 +1,62 @@
 @use "src/assets/styles/variables" as *;
 
 .card {
-    background-color: $color-white;
-    padding: 0.4rem;
-    border-radius: 1rem;
-    box-shadow: -3px 5px 12px rgba(0, 0, 0, 0.3);
+  background-color: $color-white;
+  padding: 0.4rem;
+  border-radius: 1rem;
+  box-shadow: -3px 5px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  width: 9rem;
+  height: 8rem;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  &__image {
+    width: 40%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  &__info {
     display: flex;
-    align-items: center;
-    width: 9rem;
-    height: 8rem;
-    transition: transform 0.2s ease-in-out;
-
-    &:hover {
-      transform: scale(1.03);
-  }
-    
-    &__image {
-      width: 40%; 
-      max-height: 90%;
-      object-fit: contain;
-      border-radius: 1rem 0 0 1rem;
-    }
-  
-    &__info {
-      display: flex;
-      flex-direction: column;
-      width: 60%;
-      padding: 0.4rem;
-    }
-  
-    &__name {
-      font-family: $font-headers-secondary;
-      font-size: 0.85rem;
-      margin-bottom: 0.4rem;
-    }
-  
-    &__abv {
-      font-size: 0.6rem;
-    }
-
-    &__first-brewed {
-        font-size: 0.6rem;
-        margin-bottom: 0.2rem;
-        font-weight: bold;
-      }
-  
-    &__tagline {
-      font-size: 0.6rem;
-      margin-bottom: 0.3rem;
-    }
+    flex-direction: column;
+    width: 60%;
+    padding: 0.4rem;
   }
 
-  .card-link {
-    text-decoration: none;
-    color: inherit;
+  &__name {
+    font-family: $font-headers-secondary;
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
   }
+
+  &__abv {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.5rem;
+    width: fit-content;
+    border-radius: 0.5rem;
+    border: 1.5px solid $color-black;
+    font-weight: bold;
+  }
+
+  &__first-brewed {
+    font-size: 0.6rem;
+    margin-bottom: 0.3rem;
+    font-style: italic;
+  }
+
+  &__tagline {
+    font-size: 0.6rem;
+    margin-bottom: 0.3rem;
+  }
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}

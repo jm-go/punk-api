@@ -15,6 +15,7 @@ const FiltersList = ({ onFilterChange }: FiltersListProps) => {
   return (
     <div className="filters">
       <label className="filters__label">
+        <br />
         <input
           className="filters__input"
           type="checkbox"
