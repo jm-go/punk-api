@@ -1,3 +1,5 @@
+@use "../../assets/styles/variables" as *;
+
 .card-list {
     display: flex;
     flex-direction: row;
@@ -5,4 +7,12 @@
     gap: 1rem;
     width: 94%;
     justify-content: center;
+
+    &__results {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        font-family: $font-headers;
+        font-size: 1.3rem;
+    }
 }

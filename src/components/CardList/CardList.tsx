@@ -9,9 +9,9 @@ interface CardListProps {
 const CardList = ({ beers }: CardListProps) => {
   return (
     <div className="card-list">
-      {beers.map((beer) => (
+      {beers.length > 0 ? beers.map((beer) => (
         <Card key={beer.id} beer={beer} />
-      ))}
+      )) : <h2 className="card-list__results">No results found.</h2>}
     </div>
   );
 };
