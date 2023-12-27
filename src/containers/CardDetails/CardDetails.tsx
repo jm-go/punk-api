@@ -34,11 +34,9 @@ const CardDetails = ({ beers }: CardDetailsProps) => {
         alt={beer.name}
       />
       <p className="card-details__description">{limitedDescription}</p>
-      <div className="card-details__additional-info">
-        <p>ABV: {beer.abv}%</p>
-        <p>IBU: {beer.ibu}</p>
-        <p>Brewers tips: {beer.brewers_tips}</p>
-        {/* Add more information later */}
+      <div className="card-details__facts">
+        <p className="card-details__abv">ABV {beer.abv}%</p>
+        <p className="card-details__ibu">IBU {beer.ibu}</p>
       </div>
     </div>
   );

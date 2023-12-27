@@ -2,43 +2,54 @@
 
 .card-details {
     display: flex;
-    max-width: 70%;
+    max-width: 80%;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
     margin: auto;
-    background-color: $color-white;
     padding: 1rem;
-    border-radius: 1rem;
-    box-shadow: -3px 5px 12px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
 
-    &__header {
-        font-family: $font-headers;
+    @media screen and (min-width: $breakpoint-tablet) {
+        max-width: 60%;
+    }
+
+    &__name {
+        font-family: $font-headers-secondary;
         font-size: 1.5rem;
         margin-bottom: 1rem;
+        text-align: center;
     }
 
     &__image {
-        max-width: 2rem;
+        max-width: 2.3rem;
         height: auto;
         margin-bottom: 1rem;
         border-radius: 0.5rem;
     }
 
     &__description {
-        font-size: 1rem;
+        text-align: justify;
+        font-size: 0.75rem;
         line-height: 1.5;
         margin-bottom: 1rem;
     }
 
     &__facts {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
+        font-size: 0.75rem;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
 
-        &__item {
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
+    &__abv,
+    &__ibu {
+        margin-bottom: 0.5rem;
+        align-self: center;
+        padding: 0.3rem 0.6rem;
+        width: fit-content;
+        border-radius: 0.5rem;
+        border: 1.5px solid $color-black;
+        font-weight: bold;
     }
 }
