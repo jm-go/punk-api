@@ -1,20 +1,16 @@
 import { useParams } from "react-router-dom";
 import { Beer } from "../../types/types";
 import "./CardDetails.scss";
-import { useEffect } from "react";
 
-interface CardDetailsProps {
+type CardDetailsProps = {
   beers: Beer[];
-}
+};
 
 const CardDetails = ({ beers }: CardDetailsProps) => {
   const { id } = useParams<{ id: string }>();
 
   // Find the beer directly using the id from the URL params
   const beer = beers.find((beer) => beer.id === Number(id));
-
-  useEffect(() => {
-  }, [id, beers]);
 
   if (!beer) {
     return <p>Beer not found.</p>;
