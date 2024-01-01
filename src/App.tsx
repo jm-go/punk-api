@@ -14,7 +14,7 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [highABV, setHighABV] = useState<boolean>(false);
   const [classicRange, setClassicRange] = useState<boolean>(false);
-  const [acidity, setAcidity] = useState<boolean>(false);
+  const [acidic, setAcidic] = useState<boolean>(false);
   const [page, setPage] = useState<number>(1);
 
   // Handler for search input changes
@@ -28,7 +28,7 @@ const App = () => {
     abv: boolean,
     classic: boolean,
     acidic: boolean,
-    searchTerm: string,
+    searchTerm: string
   ) => {
     try {
       const url = "https://api.punkapi.com/v2/beers";
@@ -42,10 +42,6 @@ const App = () => {
         urlWithParams += `&brewed_before=01-2010`;
       }
 
-      if (acidic) {
-        urlWithParams += `&abv_gt=6`;
-      }
-
       if (searchTerm.length > 0) {
         urlWithParams += `&beer_name=${searchTerm}`;
       }
@@ -56,7 +52,12 @@ const App = () => {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
 
-      const data: Beer[] = await response.json();
+      let data: Beer[] = await response.json();
+      
+      if (acidic) {
+        data = data.filter(beer => beer.ph < 4);
+      }
+
       setBeers(data);
     } catch (error) {
       console.error("Error fetching beer data:", error);
@@ -64,8 +65,8 @@ const App = () => {
   };
 
   useEffect(() => {
-    getBeers(page, highABV, classicRange, acidity, searchTerm);
-  }, [page, highABV, classicRange, acidity, searchTerm]);
+    getBeers(page, highABV, classicRange, acidic, searchTerm);
+  }, [page, highABV, classicRange, acidic, searchTerm]);
 
   // add comment
   const onFilterChange = (filterType: string, value: boolean): void => {
@@ -75,8 +76,8 @@ const App = () => {
     if (filterType === "classicRange") {
       setClassicRange(value);
     }
-    if (filterType === "acidity") {
-      setAcidity(value);
+    if (filterType === "highAcidity") {
+      setAcidic(value);
     }
   };
 
@@ -87,10 +88,7 @@ const App = () => {
           <NavbarMobile onSearch={handleInput} />
           <Navbar onSearch={handleInput} onFilterChange={onFilterChange} />
           <Routes>
-            <Route
-              path="/punk-api/"
-              element={<CardList beers={beers} />}
-            />
+            <Route path="/punk-api/" element={<CardList beers={beers} />} />
             <Route
               path="/punk-api/beers/:id"
               element={<CardDetails beers={beers} />}
