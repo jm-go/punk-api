@@ -2,7 +2,7 @@ import Card from "../Card/Card";
 import { Beer } from "../../types/types";
 import "./CardList.scss";
 
-interface CardListProps {
+type CardListProps = {
   beers: Beer[];
 }
 

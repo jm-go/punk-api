@@ -20,10 +20,6 @@ const CardDetails = ({ beers }: CardDetailsProps) => {
     return <p>Beer not found.</p>;
   }
 
-  // Limit description to 200 words
-  const descriptionWords = beer.description.split(" ");
-  const limitedDescription = descriptionWords.slice(0, 200).join(" ");
-
   return (
     <div className="card-details">
       <h2 className="card-details__name">{beer.name}</h2>
@@ -32,7 +28,7 @@ const CardDetails = ({ beers }: CardDetailsProps) => {
         src={beer.image_url}
         alt={beer.name}
       />
-      <p className="card-details__description">{limitedDescription}</p>
+      <p className="card-details__description">{beer.description}</p>
       <div className="card-details__facts">
         <p className="card-details__abv">ABV {beer.abv}%</p>
         <p className="card-details__ibu">IBU {beer.ibu}</p>
