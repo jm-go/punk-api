@@ -32,8 +32,12 @@
 
   &__name {
     font-family: $font-headers-secondary;
-    font-size: 0.85rem;
-    margin-bottom: 0.4rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+
+    &--small {
+      font-size: 0.7rem;
+    }
   }
 
   &__abv {
@@ -54,6 +58,10 @@
   &__tagline {
     font-size: 0.6rem;
     margin-bottom: 0.3rem;
+
+    &--small {
+      font-size: 0.5rem;
+    }
   }
 }
 

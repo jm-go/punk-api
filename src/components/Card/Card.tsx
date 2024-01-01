@@ -6,14 +6,32 @@ type CardProps = {
   beer: Beer;
 };
 
+// Function to truncate the beer's name to a specified number of words.
+const truncateCardName = (text: string, words: number) => {
+  // Truncating the beer name if it's too long.
+  const cardName = text.split(" ");
+  if (cardName.length > words) {
+    return cardName.slice(0, words).join(" ") + "...";
+  }
+  return text;
+};
+
+// Card component for displaying individual beer details.
 const Card = ({ beer }: CardProps) => {
+  const truncatedName = truncateCardName(beer.name, 6);
+  const fontSizeClassName =
+    beer.name.split(" ").length > 5 ? "card__name--small" : "";
+  const fontSizeClassTag =
+    beer.tagline.split(" ").length > 6 ? "card__tagline--small" : "";
+
   return (
+    // Link to the detailed view of the beer.
     <Link to={`/punk-api/beers/${beer.id}`} key={beer.id} className="card-link">
       <div className="card">
         <img src={beer.image_url} alt={beer.name} className="card__image" />
         <div className="card__info">
-          <h2 className="card__name">{beer.name}</h2>
-          <p className="card__tagline">{beer.tagline}</p>
+          <h2 className={`card__name ${fontSizeClassName}`}>{truncatedName}</h2>
+          <p className={`card__tagline ${fontSizeClassTag}`}>{beer.tagline}</p>
           <p className="card__first-brewed">{beer.first_brewed}</p>
           <p className="card__abv">
             <strong>ABV </strong> {beer.abv}%

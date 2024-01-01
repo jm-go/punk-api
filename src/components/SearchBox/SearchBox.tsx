@@ -2,7 +2,6 @@ import { FormEventHandler } from "react";
 import "./SearchBox.scss";
 
 type SearchBoxProps = {
-  //searchTerm: string;
   onSearch: FormEventHandler<HTMLInputElement>;
 };
 
@@ -12,7 +11,6 @@ const SearchBox = ({ onSearch }: SearchBoxProps) => {
       <input
         type="text"
         placeholder="Search"
-        //value={searchTerm}
         onChange={onSearch}
         className="search__input"
       />

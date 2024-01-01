@@ -4,20 +4,21 @@ type FiltersListProps = {
   onFilterChange: (filterType: string, value: boolean) => void;
 };
 
+// Defining filter items with their IDs, labels, and initial value.
 const filterItems = [
   {
     id: "highAlcohol",
-    label: "High ABV (> 6.0%)",
+    label: "HIGH ABV (> 6.0%)",
     value: false,
   },
   {
     id: "classicRange",
-    label: "Classic Range",
+    label: "CLASSIC RANGE",
     value: false,
   },
   {
     id: "highAcidity",
-    label: "Acidic (pH < 4)",
+    label: "ACIDIC (PH < 4)",
     value: false,
   },
 ];

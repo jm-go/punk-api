@@ -14,16 +14,11 @@ const CardDetails = ({ beers }: CardDetailsProps) => {
   const beer = beers.find((beer) => beer.id === Number(id));
 
   useEffect(() => {
-    // Adjust later
   }, [id, beers]);
 
   if (!beer) {
     return <p>Beer not found.</p>;
   }
-
-  // Limit description to 200 words
-  const descriptionWords = beer.description.split(" ");
-  const limitedDescription = descriptionWords.slice(0, 200).join(" ");
 
   return (
     <div className="card-details">
@@ -33,7 +28,7 @@ const CardDetails = ({ beers }: CardDetailsProps) => {
         src={beer.image_url}
         alt={beer.name}
       />
-      <p className="card-details__description">{limitedDescription}</p>
+      <p className="card-details__description">{beer.description}</p>
       <div className="card-details__facts">
         <p className="card-details__abv">ABV {beer.abv}%</p>
         <p className="card-details__ibu">IBU {beer.ibu}</p>
