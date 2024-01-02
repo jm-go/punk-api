@@ -97,7 +97,10 @@ const App = () => {
     <>
       <BrowserRouter>
         <div className="app-container">
-          <NavbarMobile onSearch={handleInput} />
+          <NavbarMobile
+            onSearch={handleInput}
+            onFilterChange={onFilterChange}
+          />
           <Navbar onSearch={handleInput} onFilterChange={onFilterChange} />
           <Routes>
             <Route path="/punk-api/" element={<CardList beers={beers} />} />

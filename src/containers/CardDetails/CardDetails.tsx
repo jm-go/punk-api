@@ -7,7 +7,7 @@ type CardDetailsProps = {
 };
 
 const CardDetails = ({ beers }: CardDetailsProps) => {
-  const { id } = useParams<{ id: string }>();
+  const { id } = useParams<{ id: string }>(); // Hook used to extract the id parameter from the URL.
 
   // Find the beer directly using the id from the URL params
   const beer = beers.find((beer) => beer.id === Number(id));

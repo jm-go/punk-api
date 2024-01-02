@@ -3,7 +3,7 @@
 .navbar-mobile {
     background-color: $color-black;
     color: $color-white;
-    height: 4rem;
+    height: 5.5rem;
     width: 100%;
     display: none;
     flex-direction: column;
@@ -32,13 +32,6 @@
 
     &__search {
         margin-bottom: 1.5rem;
-    }
-
-    &__filters {
-        label {
-            display: block;
-            margin-bottom: 1.5rem;
-        }
     }
 
     @media screen and (max-width: $breakpoint-tablet) {

@@ -18,9 +18,9 @@ const FilterItem = ({ filter, handleChecked }: FilterItemProps) => {
   // State to keep track of the checkbox's checked status.
   const [isChecked, setIsChecked] = useState(value);
 
-  // Function to toggle the checkbox state. When checkbox is clicked, it
-  // inverses the current checked state, updates the local state, and
-  // calls "handleChecked" to inform the parent component.
+  /* Function to toggle the checkbox state. When checkbox is clicked, it
+   inverses the current checked state, updates the local state, and
+   calls "handleChecked" to inform the parent component.*/
   const toggleCheckbox = () => {
     const newValue = !isChecked;
     setIsChecked(newValue);

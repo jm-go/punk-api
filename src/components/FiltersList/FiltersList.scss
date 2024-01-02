@@ -1,0 +1,15 @@
+@use "../../assets/styles/variables" as *;
+
+.filters-container {
+    display: block;
+    gap: 1rem;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        display: flex;
+        gap: 0.7rem;
+    }
+
+    @media screen and (max-width: $breakpoint-tablet) {
+        display: flex;
+    }
+}

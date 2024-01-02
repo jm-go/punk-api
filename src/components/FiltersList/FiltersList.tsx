@@ -1,4 +1,5 @@
 import FilterItem from "../FilterItem/FilterItem";
+import "./FiltersList.scss";
 
 type FiltersListProps = {
   onFilterChange: (filterType: string, value: boolean) => void;
@@ -29,13 +30,11 @@ const FiltersList = ({ onFilterChange }: FiltersListProps) => {
   };
 
   return (
-    <div className="filters">
+    <div className="filters-container">
       {filterItems.map((filter) => (
-        <FilterItem
-          key={filter.id}
-          filter={filter}
-          handleChecked={handleFilterChange}
-        />
+        <div className="filters" key={filter.id}>
+          <FilterItem filter={filter} handleChecked={handleFilterChange} />
+        </div>
       ))}
     </div>
   );

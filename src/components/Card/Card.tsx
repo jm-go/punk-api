@@ -6,7 +6,12 @@ type CardProps = {
   beer: Beer;
 };
 
-// Function to truncate the beer's name to a specified number of words.
+/**
+ * Truncates a given text to a specified number of words.
+ * @param {string} text - The text to be truncated.
+ * @param {number} words - The maximum number of words to be included.
+ * @returns {string} The truncated text with ellipses if it exceeds the word limit.
+ */
 const truncateCardName = (text: string, words: number) => {
   // Truncating the beer name if it's too long.
   const cardName = text.split(" ");
