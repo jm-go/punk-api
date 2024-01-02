@@ -52,4 +52,14 @@
         border: 1.5px solid $color-black;
         font-weight: bold;
     }
+
+    &__message {
+        display: flex;
+        width: 94%;
+        justify-content: center;
+        margin-top: 2rem;
+        font-family: $font-headers;
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
 }

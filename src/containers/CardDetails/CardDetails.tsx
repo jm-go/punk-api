@@ -13,7 +13,7 @@ const CardDetails = ({ beers }: CardDetailsProps) => {
   const beer = beers.find((beer) => beer.id === Number(id));
 
   if (!beer) {
-    return <p>Beer not found.</p>;
+    return <p className="card-details__message">Beer not found.</p>;
   }
 
   return (
