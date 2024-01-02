@@ -25,15 +25,12 @@ const filterItems = [
 ];
 
 const FiltersList = ({ onFilterChange }: FiltersListProps) => {
-  const handleFilterChange = (filterId: string, value: boolean) => {
-    onFilterChange(filterId, value);
-  };
 
   return (
     <div className="filters-container">
       {filterItems.map((filter) => (
         <div className="filters" key={filter.id}>
-          <FilterItem filter={filter} handleChecked={handleFilterChange} />
+          <FilterItem filter={filter} handleChecked={onFilterChange} />
         </div>
       ))}
     </div>
