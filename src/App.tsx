@@ -10,14 +10,12 @@ import CardDetails from "./containers/CardDetails/CardDetails";
 import NavbarMobile from "./components/Navbar/NavbarMobile";
 
 const App = () => {
-  // State hooks for managing beers, search term, and filters
   const [beers, setBeers] = useState<Beer[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [highABV, setHighABV] = useState<boolean>(false);
   const [classicRange, setClassicRange] = useState<boolean>(false);
   const [acidic, setAcidic] = useState<boolean>(false);
 
-  // Handler for search input changes
   const handleInput = (event: FormEvent<HTMLInputElement>) => {
     const nameInput = event.currentTarget.value.toLowerCase();
     setSearchTerm(nameInput);
@@ -68,7 +66,6 @@ const App = () => {
     }
   };
 
-  // Effect hook to fetch beers when filters/search terms change
   useEffect(() => {
     getBeers(highABV, classicRange, acidic, searchTerm);
   }, [highABV, classicRange, acidic, searchTerm]);

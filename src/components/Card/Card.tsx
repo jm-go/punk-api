@@ -13,7 +13,6 @@ type CardProps = {
  * @returns {string} The truncated text with ellipses if it exceeds the word limit.
  */
 const truncateCardName = (text: string, words: number) => {
-  // Truncating the beer name if it's too long.
   const cardName = text.split(" ");
   if (cardName.length > words) {
     return cardName.slice(0, words).join(" ") + "...";
@@ -21,7 +20,6 @@ const truncateCardName = (text: string, words: number) => {
   return text;
 };
 
-// Card component for displaying individual beer details.
 const Card = ({ beer }: CardProps) => {
   const truncatedName = truncateCardName(beer.name, 6);
   const fontSizeClassName =
@@ -30,7 +28,6 @@ const Card = ({ beer }: CardProps) => {
     beer.tagline.split(" ").length > 6 ? "card__tagline--small" : "";
 
   return (
-    // Link to the detailed view of the beer.
     <Link to={`/punk-api/beers/${beer.id}`} key={beer.id} className="card-link">
       <div className="card">
         <img src={beer.image_url} alt={beer.name} className="card__image" />

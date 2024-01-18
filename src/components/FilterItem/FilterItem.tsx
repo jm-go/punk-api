@@ -2,20 +2,16 @@ import { useState } from "react";
 import "./FilterItem.scss";
 
 type FilterItemProps = {
-  // Object representing a single filter item with id, label, and value.
   filter: {
     id: string;
     label: string;
     value: boolean;
   };
-  // Function to handle checkbox state changes
   handleChecked: (filterId: string, value: boolean) => void;
 };
 
-// The FilterItem component represents a single filter checkbox.
 const FilterItem = ({ filter, handleChecked }: FilterItemProps) => {
   const { id, label, value } = filter;
-  // State to keep track of the checkbox's checked status.
   const [isChecked, setIsChecked] = useState(value);
 
   /* Function to toggle the checkbox state. When checkbox is clicked, it

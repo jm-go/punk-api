@@ -5,7 +5,6 @@ type FiltersListProps = {
   onFilterChange: (filterType: string, value: boolean) => void;
 };
 
-// Defining filter items with their IDs, labels, and initial value.
 const filterItems = [
   {
     id: "highAlcohol",
