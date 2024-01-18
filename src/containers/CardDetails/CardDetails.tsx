@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { Beer } from "../../types/types";
 import "./CardDetails.scss";
+import beerIcon from "../../assets/images/drink-beer.svg"
 
 type CardDetailsProps = {
   beers: Beer[];
@@ -21,7 +22,7 @@ const CardDetails = ({ beers }: CardDetailsProps) => {
       <h2 className="card-details__name">{beer.name}</h2>
       <img
         className="card-details__image"
-        src={beer.image_url}
+        src={beer.image_url || beerIcon}
         alt={beer.name}
       />
       <p className="card-details__description">{beer.description}</p>

@@ -1,7 +1,8 @@
 import { Beer } from "../../types/types";
 import "./Card.scss";
 import { Link } from "react-router-dom";
-
+import beerIcon from "../../assets/images/drink-beer.svg"
+ 
 type CardProps = {
   beer: Beer;
 };
@@ -30,7 +31,7 @@ const Card = ({ beer }: CardProps) => {
   return (
     <Link to={`/punk-api/beers/${beer.id}`} key={beer.id} className="card-link">
       <div className="card">
-        <img src={beer.image_url} alt={beer.name} className="card__image" />
+        <img src={beer.image_url || beerIcon} alt={beer.name} className="card__image" />
         <div className="card__info">
           <h2 className={`card__name ${fontSizeClassName}`}>{truncatedName}</h2>
           <p className={`card__tagline ${fontSizeClassTag}`}>{beer.tagline}</p>
